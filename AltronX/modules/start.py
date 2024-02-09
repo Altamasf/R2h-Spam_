@@ -35,10 +35,12 @@ async def start(event):
         BotId = AltBot.id
         TEXT = f"**𝗛𝗘𝗬 [{event.sender.first_name}](tg://user?id={event.sender.id}),\n\n𝗜 𝗔𝗠  [{BotName}](tg://user?id={BotId})​**\n━━━━━━━━━━━━━━━━━━━\n\n"
         TEXT += f"» **✦ 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗗 𝗕𝗬 :~ [𝐓𝐇𝐔𝐍𝐃𝐄𝐑](https://t.me/II_Thunder_II)**\n\n"
-        TEXT += f"» **𝐓𝐇𝐔𝐍𝐃𝐄𝐑 𝗦𝗣𝗔𝗠 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 :** `3.2`\n"
-        TEXT += f"» **𝗧𝗘𝗟𝗘𝗧𝗛𝗢𝗡 𝗩𝗘𝗥𝗦𝗜𝗢𝗡:** `{telethon.__version__}`\n━━━━━━━━━━━━━━━━━"
+        TEXT += f"» **𝐁𝐎𝐓𝐒 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 :** `M3.3`\n"
+        TEXT += f"» **𝐏𝐘𝐓𝐇𝐎𝐍 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 :** `3.11.3`\n"
+        TEXT += f"» **𝐓𝐇𝐔𝐍𝐃𝐄𝐑 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 :** `{__version__}`\n━━━━━━━━━━━━━━━━━"
         await event.client.send_file(
-                event.chat_id,
-                "https://telegra.ph/file/36c4afc56b67cd5aafd57.jpg",
-                caption=TEXT, 
-                buttons=PythonButton)
+                    event.chat_id,
+                    "https://telegra.ph/file/36c4afc56b67cd5aafd57.jpg",
+                    caption=TEXT, 
+                    buttons=START_BUTTON
+                )
